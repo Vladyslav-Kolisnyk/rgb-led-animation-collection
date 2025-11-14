@@ -7,6 +7,7 @@
 #include "animations/randomMess.h"
 #include "animations/shift.h"
 #include "animations/lava.h"
+#include "animations/breaker.h"
 
 CRGB leds[NUM_LEDS];
 
@@ -22,6 +23,7 @@ void setup()
 
 void loop() 
 {
+  breaker(leds);
   lava(leds);
   snake(leds);
   colorWave(leds);
