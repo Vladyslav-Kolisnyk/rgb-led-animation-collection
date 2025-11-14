@@ -8,6 +8,7 @@
 #include "animations/shift.h"
 #include "animations/lava.h"
 #include "animations/breaker.h"
+#include "animations/chain.h"
 
 CRGB leds[NUM_LEDS];
 
@@ -23,6 +24,7 @@ void setup()
 
 void loop() 
 {
+  chain(leds);
   breaker(leds);
   lava(leds);
   snake(leds);
