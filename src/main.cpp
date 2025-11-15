@@ -10,6 +10,7 @@
 #include "animations/breaker.h"
 #include "animations/chain.h"
 #include "animations/trafficLight.h"
+#include "animations/breathing.h"
 
 CRGB leds[NUM_LEDS];
 
@@ -25,6 +26,7 @@ void setup()
 
 void loop() 
 {
+  breathing(leds);
   trafficLight(leds);
   chain(leds);
   breaker(leds);
