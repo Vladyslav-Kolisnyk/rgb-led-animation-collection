@@ -9,6 +9,7 @@
 #include "animations/lava.h"
 #include "animations/breaker.h"
 #include "animations/chain.h"
+#include "animations/trafficLight.h"
 
 CRGB leds[NUM_LEDS];
 
@@ -24,6 +25,7 @@ void setup()
 
 void loop() 
 {
+  trafficLight(leds);
   chain(leds);
   breaker(leds);
   lava(leds);
