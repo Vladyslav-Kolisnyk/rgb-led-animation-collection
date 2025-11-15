@@ -14,6 +14,7 @@
 #include "animations/noise.h"
 #include "animations/noise.h"
 #include "animations/pulse.h"
+#include "animations/tetris.h"
 
 CRGB leds[NUM_LEDS];
 
@@ -29,6 +30,7 @@ void setup()
 
 void loop() 
 {
+  tetris(leds);
   pulse(leds);
   noise(leds);
   breathing(leds);
