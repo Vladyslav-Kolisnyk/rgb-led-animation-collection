@@ -1,5 +1,6 @@
 #include "globals.h"
 
+// Including animation files
 #include "animations/snake.h"
 #include "animations/colorWave.h"
 #include "animations/bricks.h"
@@ -17,20 +18,23 @@
 #include "animations/tetris.h"
 #include "animations/meteor.h"
 
-CRGB leds[NUM_LEDS];
+CRGB leds[NUM_LEDS]; // Intializing your LEDs array
 
 void setup() 
 {
-  FastLED.addLeds<CHIPSET, DATA_PIN, COLOR_ORDER>(leds, NUM_LEDS);
-  FastLED.setMaxPowerInVoltsAndMilliamps(VOLTS, MAX_AMPS);
-  FastLED.setBrightness(BRIGHTNESS);
+  // Basic LED strip setup
+  FastLED.addLeds<CHIPSET, DATA_PIN, COLOR_ORDER>(leds, NUM_LEDS); // Initializing LED strip
+  FastLED.setMaxPowerInVoltsAndMilliamps(VOLTS, MAX_AMPS); // Setting maximum voltage and current
+  FastLED.setBrightness(BRIGHTNESS); // Setting brightness
   FastLED.clear();
   FastLED.show();
+
   srand(time(NULL));
 }
 
 void loop() 
 {
+  // Example animation usage
   meteor(leds);
   tetris(leds);
   pulse(leds);
