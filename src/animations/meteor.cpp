@@ -12,7 +12,14 @@ void meteor(CRGB leds[NUM_LEDS])
             leds[j] = CRGB::OrangeRed;
             for (int k = 1; k < 6; k++) 
             {
-                leds[j - (len - k)] = blend(CRGB::OrangeRed, CRGB::Black, 250 - 10 * j);
+                if (j < 2) 
+                {
+                    leds[j] = CRGB::OrangeRed;
+                }
+                else
+                {
+                    leds[j - (len - k)] = blend(CRGB::Red1, CRGB::Black, 250 - 50 * j);
+                }
             }
             leds[j - len] = CRGB::Black;
             FastLED.show();
@@ -24,7 +31,15 @@ void meteor(CRGB leds[NUM_LEDS])
             leds[j] = CRGB::OrangeRed;
             for (int k = 1; k < 6; k++) 
             {
-                leds[j + (len - k)] = blend(CRGB::OrangeRed, CRGB::Black, 250 - 10 * j);
+                if (j < 2) 
+                {
+                    leds[j] = CRGB::OrangeRed;
+                }
+                else
+                {
+                    leds[j + (len - k)] = blend(CRGB::Red1, CRGB::Black, 250 - 50 * j);
+                }
+                
             }
             leds[j + len] = CRGB::Black;
             FastLED.show();
