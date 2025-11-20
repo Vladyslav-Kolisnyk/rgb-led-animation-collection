@@ -17,6 +17,7 @@
 #include "animations/pulse.h"
 #include "animations/tetris.h"
 #include "animations/meteor.h"
+#include "animations/drops.h"
 
 CRGB leds[NUM_LEDS]; // Intializing your LEDs array
 
@@ -35,6 +36,7 @@ void setup()
 void loop() 
 {
   // Example animation usage
+  drops(leds);
   meteor(leds);
   tetris(leds);
   pulse(leds);
